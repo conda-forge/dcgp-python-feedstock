@@ -11,7 +11,7 @@ source:
     - tokens_patch.diff  # [win]
 
 build:
-  number: 0
+  number: 1
   skip: true  # [(win and py<35) or win32]
 
 requirements:
@@ -32,8 +32,7 @@ requirements:
     - obake-devel
     - symengine
     - python
-    # TODO: Remove the following in the feedstock
-    - numpy  1.14
+    - numpy
     - ipopt  # [unix]
     - gmp    # [unix]
     - mpir   # [win]
