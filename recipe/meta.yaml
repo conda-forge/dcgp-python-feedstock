@@ -1,4 +1,4 @@
-{% set version = "1.4" %}
+{% set version = "1.4.1" %}
 
 package:
   name: dcgp-python
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/darioizzo/dcgp/archive/v{{ version }}.tar.gz
-  sha256: 99c02c503d0e05f38afa125b1748833c20983acc6c3f845e29bc70ab8718eb39
+  sha256: b9ba2a55e8585b1f2e4255e7b593963017413024ab59acf018dbf5c962af48c1
   patches:
     - tokens_patch.diff  # [win]
 
