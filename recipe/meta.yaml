@@ -11,7 +11,7 @@ source:
     - tokens_patch.diff  # [win]
 
 build:
-  number: 0
+  number: 1
   skip: true  # [(win and py<35) or win32]
 
 requirements:
@@ -26,7 +26,7 @@ requirements:
     - boost-cpp
     - eigen
     - audi
-    - pagmo
+    - pagmo-devel
     - pygmo
     - tbb-devel
     - obake-devel
@@ -37,10 +37,9 @@ requirements:
     - gmp    # [unix]
     - mpir   # [win]
   run:
-    - boost
+    - {{ pin_compatible("boost", max_pin="x.x") }}
     - pyaudi
-    - pagmo
-    - pygmo
+    - {{ pin_compatible("pygmo", max_pin="x.x") }}
     - {{ pin_compatible("symengine", max_pin="x.x") }}
     - python
     - {{ pin_compatible('numpy') }}
