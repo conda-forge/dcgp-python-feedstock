@@ -9,6 +9,7 @@ source:
   sha256: c496f1215abc0379d01021312d239ce07b9e51b5c769abef873fa70f74748373
   patches:
     - tokens_patch.diff  # [win]
+    - cmake_req.diff
 
 build:
   number: 1
