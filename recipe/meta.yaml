@@ -1,4 +1,4 @@
-{% set version = "1.4.2" %}
+{% set version = "1.4.3" %}
 
 package:
   name: dcgp-python
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/darioizzo/dcgp/archive/v{{ version }}.tar.gz
-  sha256: c496f1215abc0379d01021312d239ce07b9e51b5c769abef873fa70f74748373
+  sha256: 061380fd9e9731a3a743cf708f3b2547f34f0017f9d3d6372f0c85d2b58d82e8
   patches:
     - tokens_patch.diff  # [win]
 
@@ -52,7 +52,7 @@ about:
   home: http://darioizzo.github.io/dcgp/
   license: GPL v3 and LGPL v3
   license_file: LICENSE
-  summary: 'Implementation of the differential CGP (Cartesian Genetic Programming)'
+  summary: Implementation of the differential CGP (Cartesian Genetic Programming)
 
 extra:
   recipe-maintainers:
