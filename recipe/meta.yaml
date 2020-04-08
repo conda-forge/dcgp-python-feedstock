@@ -37,16 +37,12 @@ requirements:
     - gmp    # [not win]
     - mpir   # [win]
   run:
-    - boost
+    - {{ pin_compatible("boost", max_pin="x.x") }}
     - pyaudi
-    - pagmo
-    - pygmo
+    - {{ pin_compatible("pygmo", max_pin="x.x") }}
     - {{ pin_compatible("symengine", max_pin="x.x") }}
     - python
     - {{ pin_compatible('numpy') }}
-    - ipopt  # [not win]
-    - gmp    # [not win]
-    - mpir   # [win]
 
 about:
   home: http://darioizzo.github.io/dcgp/
