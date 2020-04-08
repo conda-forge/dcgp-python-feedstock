@@ -1,7 +1,7 @@
 mkdir build
 cd build
 
-SET PYAUDI_BUILD_DIR=%cd%
+SET DCGPY_BUILD_DIR=%cd%
 
 git clone https://github.com/pybind/pybind11.git
 cd pybind11
@@ -11,8 +11,8 @@ cd build
 cmake ^
     -G "Ninja" ^
     -DPYBIND11_TEST=NO ^
-    -DCMAKE_INSTALL_PREFIX=%PYAUDI_BUILD_DIR% ^
-    -DCMAKE_PREFIX_PATH=%PYAUDI_BUILD_DIR% ^
+    -DCMAKE_INSTALL_PREFIX=%DCGPY_BUILD_DIR% ^
+    -DCMAKE_PREFIX_PATH=%DCGPY_BUILD_DIR% ^
     -DCMAKE_BUILD_TYPE=Release ^
     ..
 cmake --build . --target install
@@ -49,6 +49,7 @@ cmake ^
     -DDCGP_BUILD_DCGP=no ^
     -DDCGP_BUILD_DCGPY=yes ^
     "-DDCGP_CXX_FLAGS_EXTRA=-D_copysign=copysign" ^
+    -Dpybind11_DIR=%DCGPY_BUILD_DIR%\share\cmake\pybind11\ ^
     ..
 
 cmake --build . -- -v

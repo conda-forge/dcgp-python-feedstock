@@ -4,7 +4,7 @@ mkdir build
 cd build
 
 # Needed for pybind installation
-export PYAUDI_BUILD_DIR=`pwd`
+export DCGPY_BUILD_DIR=`pwd`
 
 
 if [[ "$target_platform" == linux-64 ]]; then
@@ -20,8 +20,8 @@ cd build
 pwd
 cmake \
     -DPYBIND11_TEST=NO \
-    -DCMAKE_INSTALL_PREFIX=$PYAUDI_BUILD_DIR \
-    -DCMAKE_PREFIX_PATH=$PYAUDI_BUILD_DIR \
+    -DCMAKE_INSTALL_PREFIX=$DCGPY_BUILD_DIR \
+    -DCMAKE_PREFIX_PATH=$DCGPY_BUILD_DIR \
     ..
 make install
 cd ../..
@@ -52,6 +52,7 @@ cmake \
     -DCMAKE_PREFIX_PATH=$PREFIX \
     -DDCGP_BUILD_DCGP=no \
     -DDCGP_BUILD_DCGPY=yes \
+    -Dpybind11_DIR=$DCGPY_BUILD_DIR/share/cmake/pybind11/ \
     ..
 
 make -j${CPU_COUNT} VERBOSE=1
