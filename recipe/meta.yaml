@@ -47,7 +47,7 @@ requirements:
 about:
   home: http://darioizzo.github.io/dcgp/
   license: GPL v3 and LGPL v3
-  license_file: LICENSE.txt
+  license_file: LICENSE
   summary: Implementation of the differential CGP (Cartesian Genetic Programming)
 
 extra:
