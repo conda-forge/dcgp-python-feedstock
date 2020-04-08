@@ -17,10 +17,10 @@ build:
 requirements:
   build:
     - cmake
-    - {{ compiler('c') }} # [not win]
-    - {{ compiler('cxx') }} # [not win]
-    - clang      # [win]
-    - ninja      # [win]
+    - {{ compiler('c') }}  # [not win]
+    - {{ compiler('cxx') }}  # [not win]
+    - clang  # [win]
+    - ninja  # [win]
   host:
     - boost
     - boost-cpp
