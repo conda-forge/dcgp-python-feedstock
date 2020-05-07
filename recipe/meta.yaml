@@ -1,4 +1,4 @@
-{% set version = "1.4.3" %}
+{% set version = "1.5" %}
 
 package:
   name: dcgp-python
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/darioizzo/dcgp/archive/v{{ version }}.tar.gz
-  sha256: 061380fd9e9731a3a743cf708f3b2547f34f0017f9d3d6372f0c85d2b58d82e8
+  sha256: 7fd9978362321aedc8368ce617095df4cf1266c5904c598efe0b09aa4e305e71
   patches:
     - tokens_patch.diff  # [win]
 
@@ -33,9 +33,6 @@ requirements:
     - symengine
     - python
     - numpy
-    - ipopt  # [not win]
-    - gmp    # [not win]
-    - mpir   # [win]
   run:
     - {{ pin_compatible("boost", max_pin="x.x") }}
     - pyaudi
