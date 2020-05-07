@@ -33,10 +33,8 @@ requirements:
     - symengine
     - python
     - numpy
-    - ipopt  # [not win]
-    - gmp    # [not win]
-    - mpir   # [win]
-  run:
+
+run:
     - {{ pin_compatible("boost", max_pin="x.x") }}
     - pyaudi
     - {{ pin_compatible("pygmo", max_pin="x.x") }}
