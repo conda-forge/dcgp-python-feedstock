@@ -11,7 +11,7 @@ source:
     - tokens_patch.diff  # [win]
 
 build:
-  number: 1
+  number: 2
   skip: true  # [(win and py<35) or win32]
 
 requirements:
@@ -40,6 +40,9 @@ requirements:
     - {{ pin_compatible("symengine", max_pin="x.x") }}
     - python
     - {{ pin_compatible('numpy') }}
+    - sympy
+    - matplotlib
+    - graphviz
 
 about:
   home: http://darioizzo.github.io/dcgp/
