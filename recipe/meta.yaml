@@ -11,7 +11,7 @@ source:
     - tokens_patch.diff  # [win]
 
 build:
-  number: 2
+  number: 3
   skip: true  # [(win and py<35) or win32]
 
 requirements:
@@ -41,7 +41,7 @@ requirements:
     - python
     - {{ pin_compatible('numpy') }}
     - sympy
-    - matplotlib
+    - matplotlib-base
     - graphviz
 
 about:
