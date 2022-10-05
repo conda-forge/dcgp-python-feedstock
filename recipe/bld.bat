@@ -34,7 +34,6 @@ cmake ^
     -DDCGP_BUILD_DCGP=no ^
     -DDCGP_BUILD_DCGPY=yes ^
     "-DDCGP_CXX_FLAGS_EXTRA=-D_copysign=copysign" ^
-    -Dpybind11_DIR=%DCGPY_BUILD_DIR%\share\cmake\pybind11\ ^
     ..
 
 cmake --build . -- -v

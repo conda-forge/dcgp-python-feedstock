@@ -37,7 +37,6 @@ cmake \
     -DCMAKE_PREFIX_PATH=$PREFIX \
     -DDCGP_BUILD_DCGP=no \
     -DDCGP_BUILD_DCGPY=yes \
-    -Dpybind11_DIR=$DCGPY_BUILD_DIR/share/cmake/pybind11/ \
     ..
 
 make -j${CPU_COUNT} VERBOSE=1
