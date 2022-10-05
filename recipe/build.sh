@@ -11,21 +11,6 @@ if [[ "$target_platform" == linux-64 ]]; then
     LDFLAGS="-lrt ${LDFLAGS}"
 fi
 
-# Install a Pybind11 version compatible with pagmo and audi
-git clone https://github.com/pybind/pybind11.git
-cd pybind11
-git checkout 4f72ef846fe8453596230ac285eeaa0ce3278bb4
-mkdir build
-cd build
-pwd
-cmake \
-    -DPYBIND11_TEST=NO \
-    -DCMAKE_INSTALL_PREFIX=$DCGPY_BUILD_DIR \
-    -DCMAKE_PREFIX_PATH=$DCGPY_BUILD_DIR \
-    ..
-make install
-cd ../..
-
 # Install the dcgp headers first.
 cmake \
     -DBoost_NO_BOOST_CMAKE=ON \
