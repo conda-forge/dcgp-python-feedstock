@@ -9,6 +9,7 @@ source:
   sha256: 7fd9978362321aedc8368ce617095df4cf1266c5904c598efe0b09aa4e305e71
   patches:
     - tokens_patch.diff  # [win]
+    - s11n_version.diff
 
 build:
   number: 4
