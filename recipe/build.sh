@@ -36,7 +36,7 @@ cmake \
     -DCMAKE_INSTALL_PREFIX=$PREFIX \
     -DCMAKE_PREFIX_PATH=$PREFIX \
     -DDCGP_BUILD_DCGP=no \
-    -DDCGP_BUILD_DCGPY=yes
+    -DDCGP_BUILD_DCGPY=yes \
     ..
 
 make -j${CPU_COUNT} VERBOSE=1
