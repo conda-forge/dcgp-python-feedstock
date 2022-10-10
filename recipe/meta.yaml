@@ -42,6 +42,8 @@ requirements:
     - libabseil
     - symengine
     - gmp
+    - pygmo
+    - cloudpickle
 
 about:
   home: http://darioizzo.github.io/dcgp/
