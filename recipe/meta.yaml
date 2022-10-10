@@ -39,6 +39,9 @@ requirements:
     - {{ pin_compatible('boost-cpp', max_pin='x.x') }}
     - {{ pin_compatible('numpy') }}
     - pyaudi
+    - libabseil
+    - symengine
+    - gmp
 
 about:
   home: http://darioizzo.github.io/dcgp/
