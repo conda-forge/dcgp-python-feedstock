@@ -44,7 +44,7 @@ requirements:
     - sympy
     - matplotlib-base
     - graphviz
-    - abseil
+    - libabseil
     - gmp
 
 about:
