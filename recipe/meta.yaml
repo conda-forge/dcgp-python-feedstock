@@ -44,7 +44,8 @@ requirements:
     - sympy
     - matplotlib-base
     - graphviz
-    - obake
+    - abseil
+    - gmp
 
 about:
   home: http://darioizzo.github.io/dcgp/
