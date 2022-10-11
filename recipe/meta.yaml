@@ -1,4 +1,4 @@
-{% set version = "1.5" %}
+{% set version = "1.6" %}
 
 package:
   name: dcgp-python
@@ -6,23 +6,23 @@ package:
 
 source:
   url: https://github.com/darioizzo/dcgp/archive/v{{ version }}.tar.gz
-  sha256: 7fd9978362321aedc8368ce617095df4cf1266c5904c598efe0b09aa4e305e71
-  patches:
-    - tokens_patch.diff  # [win]
+  sha256: 838c9b88f8ffaebaf7840f86db14552cddef02d21bdb74bc8b826e4a20372a97
 
 build:
-  number: 3
+  number: 0
   skip: true  # [(win and py<35) or win32]
 
 requirements:
   build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
     - cmake
-    - {{ compiler('c') }}  # [not win]
-    - {{ compiler('cxx') }}  # [not win]
-    - clang  # [win]
-    - ninja  # [win]
+    - make       # [unix]
+    - clang      # [win]
+    - ninja      # [win]
   host:
-    - boost
+    - pybind11
+    - pybind11-abi
     - boost-cpp
     - eigen
     - audi
@@ -34,15 +34,15 @@ requirements:
     - python
     - numpy
   run:
-    - {{ pin_compatible("boost", max_pin="x.x") }}
-    - pyaudi
-    - {{ pin_compatible("pygmo", max_pin="x.x") }}
-    - {{ pin_compatible("symengine", max_pin="x.x") }}
     - python
+    - {{ pin_compatible('boost-cpp', max_pin='x.x') }}
     - {{ pin_compatible('numpy') }}
-    - sympy
-    - matplotlib-base
-    - graphviz
+    - pyaudi
+    - libabseil
+    - symengine
+    - gmp
+    - pygmo
+    - cloudpickle
 
 about:
   home: http://darioizzo.github.io/dcgp/
