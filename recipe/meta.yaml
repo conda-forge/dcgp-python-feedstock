@@ -34,15 +34,15 @@ requirements:
     - python
     - numpy
   run:
-    - {{ pin_compatible("boost-cpp", max_pin="x.x") }}
-    - pyaudi
-    - {{ pin_compatible("pygmo", max_pin="x.x") }}
-    - {{ pin_compatible("symengine", max_pin="x.x") }}
     - python
+    - {{ pin_compatible('boost-cpp', max_pin='x.x') }}
     - {{ pin_compatible('numpy') }}
-    - sympy
-    - matplotlib-base
-    - graphviz
+    - pyaudi
+    - libabseil
+    - symengine
+    - gmp
+    - pygmo
+    - cloudpickle
 
 about:
   home: http://darioizzo.github.io/dcgp/
