@@ -40,7 +40,6 @@ requirements:
     - pyaudi
     - libabseil
     - symengine
-    - gmp
     - pygmo
     - cloudpickle
 
