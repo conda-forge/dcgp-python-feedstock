@@ -11,6 +11,11 @@ if [[ "$target_platform" == linux-64 ]]; then
     LDFLAGS="-lrt ${LDFLAGS}"
 fi
 
+if [[ "$target_platform" == osx-* ]]; then
+    # Workaround for compile issues on older OSX SDKs.
+    export CXXFLAGS="$CXXFLAGS -fno-aligned-allocation -DCATCH_CONFIG_NO_CPP17_UNCAUGHT_EXCEPTIONS -D_LIBCPP_DISABLE_AVAILABILITY"
+fi
+
 # Install the dcgp headers first.
 cmake \
     -DBoost_NO_BOOST_CMAKE=ON \
