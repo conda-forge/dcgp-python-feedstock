@@ -5,9 +5,11 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/dcgp-python-fee
 
 Home: http://darioizzo.github.io/dcgp/
 
-Package license: GPL v3 and LGPL v3
+Package license: GPL-3.0-only OR LGPL-3.0-only
 
 Summary: Implementation of the differential CGP (Cartesian Genetic Programming)
+
+Development: https://github.com/darioizzo/dcgp
 
 Current build status
 ====================
