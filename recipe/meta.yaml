@@ -18,7 +18,8 @@ requirements:
     - {{ compiler('cxx') }}
     - cmake
     - make       # [unix]
-    - clang      # [win]
+    # see #23 for reasons; should be removed when pagmo gets the required fix
+    - clang <16  # [win]
     - ninja      # [win]
   host:
     - pybind11
