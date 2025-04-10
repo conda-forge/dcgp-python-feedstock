@@ -17,7 +17,7 @@ requirements:
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
-    - cmake
+    - cmake <4
     - make       # [unix]
     # see #23 for reasons; should be removed when pagmo gets the required fix
     - clang <16  # [win]
